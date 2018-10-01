@@ -3,9 +3,9 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
 VisualStudioVersion = 15.0.27703.2026
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Otc.AuthorizationContext.Abstractions", "Otc.SessionContext.Abstractions\Otc.AuthorizationContext.Abstractions.csproj", "{2569C914-83E8-4B5E-814F-45FDCDDDDFB0}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Otc.AuthorizationContext.Abstractions", "Otc.AuthorizationContext.Abstractions\Otc.AuthorizationContext.Abstractions.csproj", "{2569C914-83E8-4B5E-814F-45FDCDDDDFB0}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Otc.AuthorizationContext.AspNetCore.Jwt", "Otc.SessionContext.AspNetCore.Jwt\Otc.AuthorizationContext.AspNetCore.Jwt.csproj", "{3D6826C6-C3C2-4902-B99B-C6BF1F0C46C6}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Otc.AuthorizationContext.AspNetCore.Jwt", "Otc.AuthorizationContext.AspNetCore.Jwt\Otc.AuthorizationContext.AspNetCore.Jwt.csproj", "{3D6826C6-C3C2-4902-B99B-C6BF1F0C46C6}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

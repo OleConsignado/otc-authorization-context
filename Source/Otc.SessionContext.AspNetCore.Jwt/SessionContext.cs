@@ -7,6 +7,7 @@ using System.Security.Claims;
 
 namespace Otc.SessionContext.AspNetCore.Jwt
 {
+    [Obsolete("Otc.SessionContext.AspNetCore.Jwt.SessionContext now is Otc.AuthorizationContext.AspNetCore.Jwt.AuthorizationContext. We strongly encourage you to migrate from Otc.SessionContext.AspNetCore.Jwt to Otc.AuthorizationContext.AspNetCore.Jwt.")]
     public class SessionContext<TSessionData> : ISessionContext<TSessionData>
         where TSessionData : ISessionData
     {

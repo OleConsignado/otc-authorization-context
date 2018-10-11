@@ -32,7 +32,19 @@ namespace Otc.AuthorizationContext.AspNetCore.Jwt
                         throw new UnauthorizedAccessException();
                     }
 
-                    var authorizationData = claimsIdentity.Claims.Single(c => c.Type == JwtConfiguration.AuthorizationDataJwtTypeName).Value;
+                    var authorizationData = claimsIdentity.Claims.SingleOrDefault(c => c.Type == JwtConfiguration.AuthorizationDataJwtTypeName)?.Value;
+
+                    // Provide compatibility to legacy SessionContext
+                    if(authorizationData == null)
+                    {
+                        authorizationData = claimsIdentity.Claims.SingleOrDefault(c => c.Type == "otc-session-data")?.Value;
+                    }
+
+                    if(authorizationData == null)
+                    {
+                        throw new InvalidOperationException("Fail to read authorization context data.");
+                    }
+
                     this.authorizationData = JsonConvert.DeserializeObject<TAuthorizationData>(authorizationData);
                 }
 
